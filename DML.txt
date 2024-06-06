@@ -1,3 +1,7 @@
+ALTER table product ADD category varchar(20) 
+
+ALTER table orders ADD orderdate DATE DEFAULT now()
+
 CREATE TABLE Customer(
     customer_id varchar(20) PRIMARY key,
     customer_name varchar(20) not null,
@@ -18,3 +22,4 @@ total_amount int,
 FOREIGN key (customer_id) REFERENCES customer(customer_id),
 FOREIGN key (product_id) REFERENCES product(product_id) 
 );
+
